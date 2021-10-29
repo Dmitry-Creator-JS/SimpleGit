@@ -1,7 +1,7 @@
 import React from 'react';
 import i from './myInput.module.css'
 
-const Input = ({props}) => {
+const MyInput = ({props}) => {
     return (
         <input {...props} className={i.inp} />
 
@@ -9,4 +9,4 @@ const Input = ({props}) => {
     );
 };
 
-export default Input;
+export default MyInput;

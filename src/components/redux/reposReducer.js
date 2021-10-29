@@ -1,5 +1,6 @@
 
 export const SET_REPOS = 'SET_REPOS';
+export const SET_IS_FETCHING = 'SET_IS_FETCHING';
 
 
 let initialState = {
@@ -12,6 +13,11 @@ const reposReducer = (state=initialState, action) => {
         case SET_REPOS:
             return {
                 ...state, repos: action.payload.items
+            }
+
+        case SET_IS_FETCHING:
+            return {
+                ...state, isLoad: action.payload
             }
 
         default:

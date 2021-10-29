@@ -5,3 +5,11 @@
     margin: 20px;
     padding: 10px;
 }
+
+.search {
+    display: flex;
+}
+
+.search input  {
+    width: 100%;
+}
