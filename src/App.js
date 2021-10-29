@@ -1,12 +1,17 @@
 import './App.css';
-import {Route} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import Main from "./components/main/Main";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
     <div className="App">
+        <Switch>
+            <Route exact path='/' component={Main} />
+            <Route path='/card' component={Card} />
+            <Redirect to='/'/>
+        </Switch>
 
-       <Route path='/' component={Main} />
     </div>
   );
 }
