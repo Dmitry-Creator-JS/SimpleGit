@@ -17,6 +17,12 @@ import {SET_CURRENT_PAGE, SET_IS_FETCHING, SET_REPOS} from "./reposReducer";
     }
 }
 
+export const getCurrentRepo =  async (userName, repoName, setRepo) => {
+    const response = await axios.get(`https://api.github.com/repos/${userName}/${repoName}`)
+    console.log(response.data)
+    setRepo(response.data)
+}
+
 
 export const setRepoAC = (rep) => {
      return {
